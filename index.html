@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Delay Manipulation for Creative Sound Transformation with the Giant FFT</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2em 1em;
+      line-height: 1.5;
+      color: #1f2328;
+    }
+    h1 { font-size: 2em; border-bottom: 1px solid #d1d9e0; padding-bottom: .3em; }
+    h2 { font-size: 1.5em; border-bottom: 1px solid #d1d9e0; padding-bottom: .3em; margin-top: 1.5em; }
+    audio { display: block; margin: .5em 0 1.5em 0; }
+  </style>
+</head>
+<body>
+
+<h1>Group Delay Manipulation for Creative Sound Transformation with the Giant FFT</h1>
+<p>Sound Examples.</p>
+
+<h2>1. Temporal Reordering</h2>
+
+<p>A synthetic 4-note arpeggio is analyzed with a single FFT. Spectral segments are identified around amplitude peaks and grouped by group delay similarity. The temporal order of the groups is then reversed, so the notes play in reverse order while preserving their original amplitude envelopes.</p>
+
+<p><b>Synthetic arpeggio (original):</b></p>
+<audio controls><source src="audio/synth_arpeggio_original.wav" type="audio/wav"></audio>
+
+<p><b>Synthetic arpeggio (reversed):</b></p>
+<audio controls><source src="audio/synth_arpeggio_reversed.wav" type="audio/wav"></audio>
+
+<p>The same transformation applied to a recording of a glockenspiel playing a 4-note arpeggio. The inharmonic partials of the glockenspiel are correctly identified as belonging to different notes and reordered in time.</p>
+
+<p><b>Glockenspiel arpeggio (original):</b></p>
+<audio controls><source src="audio/glockenspiel_original.wav" type="audio/wav"></audio>
+
+<p><b>Glockenspiel arpeggio (reversed):</b></p>
+<audio controls><source src="audio/glockenspiel_reversed.wav" type="audio/wav"></audio>
+
+<h2>2. Amplitude-Proportional Displacement</h2>
+
+<p>A single harpsichord note is analyzed. Each spectral segment is displaced in time by an amount proportional to its peak amplitude. Higher amplitude partials are displaced further, causing the spectral content to unfold over a longer duration.</p>
+
+<p><b>Harpsichord note (original):</b></p>
+<audio controls><source src="audio/harpsichord_original.wav" type="audio/wav"></audio>
+
+<p><b>Harpsichord note (displaced):</b></p>
+<audio controls><source src="audio/harpsichord_displaced.wav" type="audio/wav"></audio>
+
+<h2>3. Periodic Group Delay Modulation</h2>
+
+<p>Sinusoidal modulation of group delay values across frequency creates discrete temporal copies of each spectral segment. Different segments are modulated at different rates, with lower frequency segments repeating slower and higher frequency segments repeating faster. The output is extended to 20 times the original duration.</p>
+
+<p><b>Harpsichord note (displaced and modulated):</b></p>
+<audio controls><source src="audio/harpsichord_modulated.wav" type="audio/wav"></audio>
+
+</body>
+</html>
