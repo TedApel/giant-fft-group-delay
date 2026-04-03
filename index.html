@@ -25,12 +25,12 @@
 
 <h2>1. Temporal Reordering</h2>
 
-<p>A synthetic 4-note arpeggio is analyzed with a single FFT. Spectral segments are identified around amplitude peaks and grouped by group delay similarity. The temporal order of the groups is then reversed, so the notes play in reverse order while preserving their original amplitude envelopes.</p>
+<p>A synthetic 4-note arpeggio is analyzed with a single FFT. Spectral segments are identified around amplitude peaks and grouped by group delay similarity. The temporal order of the groups is then reordered, so the notes play in a different order while preserving their original amplitude envelopes.</p>
 
 <p><b>Synthetic arpeggio (original):</b></p>
 <audio controls><source src="audio/synth_arpeggio_original.wav" type="audio/wav"></audio>
 
-<p><b>Synthetic arpeggio (reversed):</b></p>
+<p><b>Synthetic arpeggio (reordered):</b></p>
 <audio controls><source src="audio/synth_arpeggio_reversed.wav" type="audio/wav"></audio>
 
 <p>The same transformation applied to a recording of a glockenspiel playing a 4-note arpeggio. The inharmonic partials of the glockenspiel are correctly identified as belonging to different notes and reordered in time.</p>
@@ -38,7 +38,7 @@
 <p><b>Glockenspiel arpeggio (original):</b></p>
 <audio controls><source src="audio/glockenspiel_original.wav" type="audio/wav"></audio>
 
-<p><b>Glockenspiel arpeggio (reversed):</b></p>
+<p><b>Glockenspiel arpeggio (reordered):</b></p>
 <audio controls><source src="audio/glockenspiel_reversed.wav" type="audio/wav"></audio>
 
 <h2>2. Amplitude-Proportional Displacement</h2>
