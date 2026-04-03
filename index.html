@@ -43,12 +43,15 @@
 
 <h2>2. Amplitude-Proportional Displacement</h2>
 
-<p>A single harpsichord note is analyzed. Each spectral segment is displaced in time by an amount proportional to its peak amplitude. Higher amplitude partials are displaced further, causing the spectral content to unfold over a longer duration.</p>
+<p>A single harpsichord note is analyzed. Each spectral segment is displaced in time by an amount proportional to its peak amplitude. Higher amplitude partials are displaced further, causing the spectral content to unfold over a longer duration. The per-bin example applies the same displacement to every frequency bin independently, without segmentation, producing the smeared texture characteristic of incoherent giant FFT manipulation.</p>
 
 <p><b>Harpsichord note (original):</b></p>
 <audio controls><source src="audio/harpsichord_original.wav" type="audio/wav"></audio>
 
-<p><b>Harpsichord note (displaced):</b></p>
+<p><b>Harpsichord note (per-bin displacement, no segmentation):</b></p>
+<audio controls><source src="audio/harpsichord_incoherent.wav" type="audio/wav"></audio>
+
+<p><b>Harpsichord note (per-segment displacement):</b></p>
 <audio controls><source src="audio/harpsichord_displaced.wav" type="audio/wav"></audio>
 
 <h2>3. Periodic Group Delay Modulation</h2>
